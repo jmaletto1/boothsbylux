@@ -1,0 +1,159 @@
+html,
+body {
+  margin: 0;
+}
+
+.main__container {
+  width: 100%;
+}
+
+/* ================================= 
+  Alignment
+==================================== */
+
+.text--center {
+  text-align: center;
+}
+
+.text--left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* ================================= 
+  Padding
+==================================== */
+
+/* Padding-Top */
+
+.pt-1 {
+  padding-top: 0.5rem;
+}
+
+.pt-2 {
+  padding-top: 1rem;
+}
+
+.pt-3 {
+  padding-top: 1.5rem;
+}
+
+.pt-4 {
+  padding-top: 2rem;
+}
+
+/* Padding-Right */
+
+.pr-1 {
+  padding-right: 0.5rem;
+}
+
+.pr-2 {
+  padding-right: 1rem;
+}
+
+.pr-3 {
+  padding-right: 1.5rem;
+}
+
+.pr-4 {
+  padding-right: 2rem;
+}
+
+/* Padding-Bottom */
+
+.pb-1 {
+  padding-bottom: 0.5rem;
+}
+
+.pb-2 {
+  padding-bottom: 1rem;
+}
+
+.pb-3 {
+  padding-bottom: 1.5rem;
+}
+
+.pb-4 {
+  padding-bottom: 2rem;
+}
+
+/* Padding-Left */
+
+.pl-1 {
+  padding-left: 0.5rem;
+}
+
+.pl-2 {
+  padding-left: 1rem;
+}
+
+.pl-3 {
+  padding-left: 1.5rem;
+}
+
+.pl-4 {
+  padding-right: 2rem;
+}
+
+/* Padding-ALL */
+
+.px-1 {
+  padding: 0.5rem;
+}
+
+.px-2 {
+  padding: 1rem;
+}
+
+.px-3 {
+  padding: 1.5rem;
+}
+
+.px-4 {
+  padding: 2rem;
+}
+
+/* ================================= 
+  Borders
+==================================== */
+
+.border--test {
+  border: 3px solid dodgerblue;
+}
+
+/* ================================= 
+  Flexbox
+==================================== */
+
+.flex__center {
+  /* align-items: center; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex__align__center {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
+
+/* ================================= 
+  Grids
+==================================== */
+
+.grid__1x2 {
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .grid__1x2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
