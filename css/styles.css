@@ -1,11 +1,118 @@
 /* ================================= 
-  Headings
+  CSS Variables
+==================================== */
+
+:root {
+  --primary-colour: #e9b1d5;
+  --text-colour: #7a7a7a;
+  --primary-font: "Roboto", sans-serif;
+}
+
+/* ================================= 
+  Headings & Text
 ==================================== */
 
 h3 {
-  text-align: left;
+  color: var(--primary-colour);
+  font-family: var(--primary-font);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+p {
+  color: var(--text-colour);
+  font-family: var(--primary-font);
+  line-height: 1.5rem;
+}
+
+/* ================================= 
+  Photo Container
+==================================== */
+
+.photo__container {
+  background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 0.5) 5%,
+      rgba(233, 177, 213, 0.3) 29%
+    ),
+    url("../img/photo-preview.jpeg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container__padding {
-  padding: 15%;
+  padding: 12.5%;
+}
+
+@media screen and (max-width: 767px) {
+  .photo__container {
+    height: 60vh;
+  }
+}
+
+/* ================================= 
+  Buttons
+==================================== */
+
+#btn {
+  background: violet;
+  height: 50px;
+  min-width: 150px;
+  max-width: 400px;
+  border: none;
+  border-radius: 10px;
+  color: #eee;
+  font-size: 40px;
+  font-family: "Cookie", cursive;
+  position: relative;
+  transition: 1s;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding-top: 5px;
+}
+
+#btn #circle {
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  overflow: hidden;
+  transition: 500ms;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#btn:hover {
+  /* background-color: white; */
+  color: violet;
+}
+
+#btn:hover #circle {
+  height: 50px;
+  width: 150px;
+  left: 0;
+  border-radius: 0;
+  border-bottom: 2px solid white;
+}
+
+#btn a {
+  text-decoration: none;
+  color: #eee;
 }
