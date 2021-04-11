@@ -26,3 +26,11 @@
 // 		}, 3500);
 // 	}, 5500);
 // });
+
+  $(function(){
+  $(".footer").load("/footer.html")
+  });
+
+  $(function(){
+    $(".desktop__nav").load("/nav.html")
+    });

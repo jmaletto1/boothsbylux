@@ -431,3 +431,18 @@ footer {
   margin-top: 1rem;
   padding: 1rem;
 }
+
+
+/*////////////////////////////////
+Contact Us Page 
+////////////////////////////////*/
+
+#contact {
+  background: linear-gradient(
+    0deg,
+    rgba(233, 177, 213, 0.2),
+    rgba(255, 178, 200, 0.4)
+  ), url('../img/contact-hero.jpg');
+  clip-path: polygon(100% 0%, 74% 0%, 32% 0%, 0% 0%, 0% 25%, 0% 100%, 5% 95%, 24% 98%, 44% 96%, 68% 98%, 85% 96%, 93% 97%, 100% 100%, 100% 26%);  /* background-image: url('../img/hero.jpeg') */
+  
+}
