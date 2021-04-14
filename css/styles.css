@@ -735,7 +735,7 @@ iframe {
   border-radius: 4px;
   font-family: var(--primary-font);
   padding: 1rem;
-  margin-top: 3rem;
+  margin-top: 0rem;
 }
 
 .service__focus {
@@ -816,4 +816,88 @@ iframe {
     margin-top: 13rem;
   }
   
+}
+
+/* ================================= 
+ Magic Mirror
+==================================== */
+
+#magic-mirror-hero {
+  background: linear-gradient(
+    0deg,
+    rgba(233, 177, 213, 0.4),
+    rgba(255, 178, 200, 0.7)
+  ), url('../img/magic-mirror-print-out.jpeg');
+  background-size:cover;
+  background-position: center;
+  clip-path: polygon(100% 0%, 74% 0%, 32% 0%, 0% 0%, 0% 25%, 0% 100%, 5% 95%, 24% 98%, 44% 96%, 68% 98%, 85% 96%, 93% 97%, 100% 100%, 100% 26%);
+}
+
+/* ================================= 
+ 360 Photo Booth
+==================================== */
+
+#hero__video {
+  max-width: 100%;
+}
+
+#hero__360 {
+  background: none;
+}
+
+.pt--none {
+  padding-top: 0;
+}
+
+.hero__auto {
+  height: auto;
+}
+
+@media screen and (min-width: 768px) {
+  #hero__video {
+    width: 100%;
+  }
+}
+
+/* ================================= 
+ Roamer
+==================================== */
+
+#roamer--hero {
+  background: linear-gradient(
+    0deg,
+    rgba(233, 177, 213, 0.4),
+    rgba(255, 178, 200, 0.7)
+  ), url('../img/roamer-first-dance.jpeg');
+  background-size:cover;
+  background-position: center;
+  clip-path: polygon(100% 0%, 74% 0%, 32% 0%, 0% 0%, 0% 25%, 0% 100%, 5% 95%, 24% 98%, 44% 96%, 68% 98%, 85% 96%, 93% 97%, 100% 100%, 100% 26%);
+}
+
+.roamer--h2 {
+  font-size: 4rem;
+  margin-top: 30%;
+}
+
+@media screen and (min-width: 768px) {
+  .roamer--h2 {
+    font-size: 7rem;
+    margin-top: 10rem;
+  }
+}
+
+/* ================================= 
+ Selfie Pod
+==================================== */
+
+#selfie--hero {
+  background: linear-gradient(
+    0deg,
+    rgba(233, 177, 213, 0.4),
+    rgba(255, 178, 200, 0.7)
+  ), url('../img/selfie--hero.jpeg');
+  background-size:cover;
+  background-position: center;
+  clip-path: polygon(100% 0%, 74% 0%, 32% 0%, 0% 0%, 0% 25%, 0% 100%, 5% 95%, 24% 98%, 44% 96%, 68% 98%, 85% 96%, 93% 97%, 100% 100%, 100% 26%);
+
 }
