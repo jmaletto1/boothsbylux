@@ -7,13 +7,10 @@
     <title>Booths By Lux - Photo Booth Hire London</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=BenchNine:wght@700&family=Roboto:wght@300&family=Ubuntu:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=BenchNine:wght@700&family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,400&family=Ubuntu:wght@400&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cookie&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="css/nello.css" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
@@ -72,7 +69,7 @@
         </div>
         <div class="photo__container">
           <div id="btn">
-            <a href="#contact"><span class="noselect"> Say Hello</span></a>
+            <a href="#contact"><button class="button__submit" id="focus--button">SAY HI</button></a>
             <div id="circle"></div>
           </div>
         </div>
@@ -83,20 +80,20 @@
         <h4>OUR SERVICES</h4>
         <div class="grid__1x3">
           <div class="service__card">
-            <a href="/photo-booth-hire">
-              <img class="service__image" src="img/mirror-preview.jpeg" alt="">
+            <a href="/magic-mirror-hire">
+              <img class="service__image" src="img/mirror-preview.jpg" alt="Magic Mirror Set up at a Wedding.">
               <h5 class="service__header">Magic Mirrors</h5>
             </a>
           </div>
           <div class="service__card">
-            <a href="/magic-mirror-hire">
-              <img class="service__image" src="img/Photo-Booth-Portrait.jpeg" alt="">
+            <a href="/photo-booth-hire">
+              <img class="service__image" src="img/Photo-Booth-Portrait.jpeg" alt="Photo Booth Set up at a Corporate Event">
               <h5 class="service__header">Photo Booths</h5>
             </a>
           </div>
           <div class="service__card"> 
             <a href="/360-photo-booth-hire">
-              <img class="service__image" src="img/360-scaled.jpg" alt="">
+              <img class="service__image" src="img/360-scaled.jpg" alt="360 Photo Booth in Action at a Private Event.">
                         <h5 class="service__header">360 Photo Booths</h5>
             </a>
           </div>
@@ -105,7 +102,74 @@
 
 
 <!-- Testimonials / Reviews -->
-<div class="container container--pink">
+<section class="spacer">
+      
+  <div class="testimonial-section">
+    <div class="testi-user-img">
+    <div class="swiper-container gallery-thumbs">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img class="u3" src="/img/headshot-1.jpg" alt="">
+            </div>
+        <div class="swiper-slide">
+          <img class="u1" src="/img/headshot-2.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+        <img class="u2" src="/img/headshot-3.jpg" alt="">
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="user-saying">
+        <div class="swiper-container testimonial">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper ">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="quote">
+                    <img class="quote-icon" src="/img/quote-icon.png" alt="">
+                  <p class="text--white text--nobg">
+                      “I hired a mirror booth for my 30th birthday from Booths by Lux. The mirror looked amazing set up at the venue and everyone loved taking part! At one point there were more people queueing at the booth than the bar!.. Would definitely recommend!“
+                  </p>
+                  <div class="testimonial--name">-Antony H-</div>
+                  <div class="designation">London, UK</div>
+                  
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="quote">
+                  <img class="quote-icon" src="/img/quote-icon.png" alt="">
+                
+                  <p class="text--white text--nobg">
+                      “We booked the roaming booth, and John was a delight to work with in the run up to the event, accommodating my wish for a custom design on the photo frames and really communicative and professional. The roaming booth was a HUGE hit!! Everyone loved it, and Dan the operator was fabulous as well.“
+                  </p>
+                  <div class="testimonial--name">-Lori H-</div>
+                  <div class="designation">London, UK</div>
+                  
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="quote">
+                  <img class="quote-icon" src="/img/quote-icon.png" alt="">
+                    
+                  <p class="text--white text--nobg">
+                      “The whole experience with Booths By Lux was incredibly smooth and professional. John and his team are friendly and professional - they care about the details to make sure you have a wonderful event. I highly recommend them.“
+                  </p>
+                  <div class="testimonial--name">-Liz F-</div>
+                  <div class="designation">Surrey</div>
+                  
+                </div>
+              </div>
+              
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination swiper-pagination-white"></div>
+          
+          </div>
+    </div>
+  </div>
+</section>
+<!-- <div class="container container--pink">
   <h4 class="header--white">Customer Reviews</h4>
   <div class="testimonial__card">
     <h5>Antony H, London</h5>
@@ -119,28 +183,10 @@
     <h5>Liz F, Surrey</h5>
   <p class="font--white">The whole experience with Booths By Lux was incredibly smooth and professional. John and his team are friendly and professional - they care about the details to make sure you have a wonderful event. I highly recommend them.</p>
   </div>
-</div>
+</div> -->
 
-<!-- Contact Form -->
-<div class="grid__1x2 grid--medium">
-    <form class="contact__form" action="#">
-      <h4 class="contact--header">Same Day Quotes!</h4>
-      <p class="text--center">Contact us for a fully-bespoke quotation.</p>
-      <input type="text" name="name" placeholder="Your name...">
-      <input type="email" name="email" placeholder="Email address...">
-      <input type="tel" name="tel" placeholder="Phone No (Optional)">
-      <textarea name="message" id="" cols="30" rows="10" placeholder="How can we help?"></textarea>
-    <button class="button__submit">SAY HI</button>
-    </form>
-  <div class="contact__details">
-    <h6>SAY HI</h6>
-    <p class="contact--text"><strong>PHONE</strong></p>
-    <a class="contact--link" href="tel:01727261005"><h3 class="contact--link">01727 261005</h3></a>
-    <p class="contact--text"><strong>EMAIL</strong></p>
-    <a href="mailto:team@boothsbylux.co.uk"><h3 class="contact--link" >team@boothsbylux.co.uk</h3></a>
-  <p class="contact--text"><strong>LOCATION</strong></p>
-  <h3 class="contact--link">27 Trinity Road, East Finchley, London, N2 8JJ</h3>
-  </div>
+<div class="contact__container">
+  <!-- Contact Component Here -->
 </div>
 
 <!-- Footer -->
@@ -150,6 +196,7 @@
 
       </div>
     </div>
+    <script src="/js/slider.js"></script>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/script.js"></script>
   </body>

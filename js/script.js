@@ -50,7 +50,86 @@ $('.mobile__link').click( () => {
   closeNav();
   })
 
-  // Mobile Nav
+// Mobile Nav
 
-  $('#select-link').click(() =>
-  alert(hi))
+// const sayHi = document.getElementById('sayhibutton');
+// sayHi.addEventListener("click", () => {
+//   alert("yo")
+// })
+
+// Contact Form Submission
+$("#sayhi").click(function() {
+alert("hi")
+})
+
+$("#contact-form").on('submit',function(event) {
+  event.preventDefault(); // to prevent default page reloading
+  var dataString = $(this).serialize(); // to get the form data
+  $(".contact--form").html("")
+  $.ajax({
+      method: "POST",
+      url: "localhost:5500/contact-form-handler.php",
+      data: dataString,
+      success: function(data){
+          $('#contact-form')[0].reset(); // to reset form data
+      }
+  }).done(function(data){
+      setTimeout(function () {
+          $('.contactform-messages').addClass('active');
+      }, 500);
+  });
+});
+
+
+// Slider
+var galleryThumbs = new Swiper('.gallery-thumbs', {
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: '2',
+  // coverflowEffect: {
+  //   rotate: 50,
+  //   stretch: 0,
+  //   depth: 100,
+  //   modifier: 1,
+  //   slideShadows : true,
+  // },
+  
+  coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 50,
+        modifier: 6,
+        slideShadows : false,
+    },
+    
+  });
+  
+  
+var galleryTop = new Swiper('.swiper-container.testimonial', {
+  speed: 400,
+  spaceBetween: 50,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    320: {
+      direction: 'horizontal'
+    },
+    768: {
+      direction: 'vertical'
+    }
+  },
+  // direction: 'vertical',
+  pagination: {
+    clickable: true,
+    el: '.swiper-pagination',
+    type: 'bullets',
+  },
+  thumbs: {
+    swiper: galleryThumbs
+    }
+    
+  });
+  

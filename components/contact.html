@@ -1,20 +1,57 @@
-<div class="grid__1x2 grid--medium">
-    <form class="contact__form" action="#">
-      <h4 class="contact--header">Same Day Quotes!</h4>
-      <p class="text--center">Contact us for a fully-bespoke quotation.</p>
-      <input type="text" name="name" placeholder="Your name...">
-      <input type="email" name="email" placeholder="Email address...">
-      <input type="tel" name="tel" placeholder="Phone No (Optional)">
-      <textarea name="message" id="" cols="30" rows="10" placeholder="How can we help?"></textarea>
-    <button class="button__submit">SAY HI</button>
-    </form>
+<div class="grid__1x2 grid--medium contact--form">
+    <div class="form__container">
+      <form class="contact__form" action="" name="contact" id="contact-form">
+        <h4 class="contact--header">Same Day Quotes!</h4>
+        <p class="text--center">Contact us for a fully-bespoke quotation.</p>
+        <input type="text"  required name="name" id="name" placeholder="Your name..." minlength="5" maxlength="50">
+        <input type="email" required name="email" id="email" placeholder="Email address..." minlength="7" maxlength="50">
+        <input type="tel" name="tel" id="tel" placeholder="Phone No (Optional)" >
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="How can we help?" maxlength="1000"></textarea>
+      <button class="button__submit">SAY HI</button>
+      </form>
+      <div class="success__message">
+        <h2 class="success--h2">Form Successfully Submitted!</h2>
+        <p class="text--center">We aim to respond to all enquiries within one working day.</p>
+      </div>
+    </div>
   <div class="contact__details">
-    <h6>SAY HI</h6>
+    <h6 id="sayhi">SAY HI</h6>
     <p class="contact--text"><strong>PHONE</strong></p>
     <a class="contact--link" href="tel:01727261005"><h3 class="contact--link">01727 261005</h3></a>
     <p class="contact--text"><strong>EMAIL</strong></p>
     <a href="mailto:team@boothsbylux.co.uk"><h3 class="contact--link" >team@boothsbylux.co.uk</h3></a>
   <p class="contact--text"><strong>LOCATION</strong></p>
   <h3 class="contact--link">27 Trinity Road, East Finchley, London, N2 8JJ</h3>
-  </div>
 </div>
+</div>
+
+<script>
+$( "form" ).on( "submit", function(e) {
+ 
+ var dataString = $(this).serialize();
+ $("#contact-form").fadeOut()
+ $('.success__message').fadeIn("slow").css("display", "flex")
+  
+ // alert(dataString); return false;
+
+ $.ajax({
+   type: "POST",
+   url: "https://formspree.io/f/xvodgoev",
+   data: dataString,
+   success: function () {
+     $("#contact-form").html("<div id='message'></div>");
+     $("#message")
+       .html("<h2>Contact Form Submitted!</h2>")
+       .append("<p>We will be in touch soon.</p>")
+       .hide()
+       .fadeIn(1500, function () {
+         $("#message").append(
+           "<img id='checkmark' src='images/check.png' />"
+         );
+       });
+   }
+ });
+
+ e.preventDefault();
+});
+</script>
