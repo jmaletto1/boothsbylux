@@ -365,14 +365,23 @@ h4 {
   text-align: center;
   margin: 0 auto;
   margin-bottom: 2rem;
+  overflow: hidden;
   max-width: 330px;
   transition: .5s ease-out;
+  transform-origin: 0 0;
 }
 
 .service__card:hover {
   opacity: .5;
 }
 
+.service__card img {
+  transition: .5s ease-out;
+}
+
+.service__card img:hover {
+  transform: scale(1.05);
+}
 
 .service__image {
   border-radius: 4px;
